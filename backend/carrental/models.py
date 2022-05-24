@@ -9,7 +9,7 @@ class FuelType(models.Model):
     fuel_name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.fuel_name
 
 
 class CarCategory(models.Model):
