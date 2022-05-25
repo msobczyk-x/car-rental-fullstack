@@ -19,7 +19,8 @@ from rest_framework import routers
 from carrental import views
 
 router = routers.DefaultRouter()
-router.register(r'carrentals', views.CarView, 'carrental')
+router.register(r'cars', views.CarView, 'carrental')
+router.register(r'customers', views.CustomerView, 'carrental')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
