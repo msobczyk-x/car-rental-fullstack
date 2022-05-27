@@ -1,0 +1,41 @@
+@import '~semantic-ui-css/semantic.css';
+
+$base-blue: #0C2461;
+$light-blue: #1E3799;
+$crimson-red: #B71540;
+$grey-light: #D9D9D9;
+
+.Main {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.navbar {
+  height: 15vh;
+  background-color: $base-blue;
+  color: $grey-light;
+}
+
+
+.search-container {
+  min-width: 500px;
+  height: 30vh;
+  background-color: $crimson-red;
+}
+
+
+.search-form {
+  padding: 25px;
+  background-color: $crimson-red;
+}
+
+.btn-form {
+  background-color: $light-blue;
+
+  border: none;
+}
+.bi-search {
+  margin-left: 5px;
+}
