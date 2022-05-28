@@ -1,0 +1,16 @@
+$base-blue: #0c2461;
+$light-blue: #1e3799;
+$crimson-red: #b71540;
+$grey-light: #d9d9d9;
+
+.SearchCars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $crimson-red;
+  width: 900px;
+  height: 30vh;
+  -webkit-box-shadow: 11px 12px 32px -17px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 11px 12px 32px -17px rgba(66, 68, 90, 1);
+  box-shadow: 11px 12px 32px -17px rgba(66, 68, 90, 1);
+}
