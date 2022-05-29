@@ -1,24 +1,24 @@
 import React from "react";
 import "./HeaderPage.scss";
-import { Header, Container, Icon } from "semantic-ui-react";
+import {  Icon } from "semantic-ui-react";
 import SearchCars from "../search-cars/Search-cars";
 const HeaderPage = () => {
   return (
     <div className="HeaderPage">
       
-      <Header as="h1">Car Rental – Search, Compare & Save</Header>
+      <h1 className="main-title">Car Rental – Search, Compare & Save</h1>
       <div className="hd-cont">
         <div className="hd-cont__search">
         <Icon fitted size="big" name='car' />
-      <Header as="h4">Compact cars to most luxury ones</Header>
+      <h4>Compact cars to most luxury ones</h4>
       </div>
       <div className="hd-cont__search">
       <Icon fitted size="big" name='plane' />
-      <Header as="h4">Location in 5 major cities in Poland</Header>
+      <h4>Location in 5 major cities in Poland</h4>
       </div>
       <div className="hd-cont__search">
       <Icon fitted size="big" name='language' />
-      <Header as="h4">Customer support in 5 languages</Header>
+      <h4>Customer support in 5 languages</h4>
       </div>
      
       </div>

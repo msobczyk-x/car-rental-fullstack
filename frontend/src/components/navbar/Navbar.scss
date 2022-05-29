@@ -1,28 +1,49 @@
-$base-blue: #0C2461;
-$light-blue: #1E3799;
-$crimson-red: #B71540;
-$grey-light: #D9D9D9;
-
+$base-blue: #0c2461;
+$light-blue: #1e3799;
+$crimson-red: #b71540;
+$grey-light: #d9d9d9;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 .Navbar {
-    width: 100%;
-    height: 15vh;
-    background-color: $base-blue;
-    color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Navbar__logo {
-
+  width: 100%;
+  height: 10vh;
+  background-color: $base-blue;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Navbar__links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 50px;
+  
+}
+
+
+.Navbar__logo img {
+    width: 250px;
+    margin:0 50px;
+}
+
+
+
+.Navbar_button {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Lato", Open Sans;
+    font-weight: 700;
+    margin: 0 25px;
+    padding: 15px;
+
+}
+.Navbar_button:hover {
+    color: #f3275d;
+}
+.btn-active {
+  border-bottom: #f3275d solid 3px;
+  color: #f3275d ;
 }

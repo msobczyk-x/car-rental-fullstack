@@ -5,12 +5,31 @@ $grey-light: #d9d9d9;
 
 .SearchCars {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $crimson-red;
   width: 900px;
   height: 30vh;
   -webkit-box-shadow: 11px 12px 32px -17px rgba(66, 68, 90, 1);
   -moz-box-shadow: 11px 12px 32px -17px rgba(66, 68, 90, 1);
   box-shadow: 11px 12px 32px -17px rgba(66, 68, 90, 1);
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+
+
+}
+
+.SearchCars h1 {
+  font-size: 2.2rem;
+}
+
+.form-input {
+  font-size: 1.2rem;
+}
+
+.submit-btn {
+  font-size: 1.2rem;
+  color: #242425;
 }
