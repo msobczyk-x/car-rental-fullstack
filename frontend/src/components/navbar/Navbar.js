@@ -11,7 +11,7 @@ const Navbar = () => {
         <a href="#home" className="Navbar_button btn-active" >
           Home
         </a>
-        <a href="#home" className="Navbar_button">
+        <a href="#about" className="Navbar_button">
           About
         </a>
         <a href="#home" className="Navbar_button">

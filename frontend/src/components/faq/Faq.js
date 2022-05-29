@@ -72,6 +72,115 @@ export default class Faq extends Component {
               may not find one so readily.
             </p>
           </Accordion.Content>
+
+
+          <Accordion.Title
+            active={activeIndex === 3}
+            index={3}
+            onClick={this.handleClick}
+          >
+            <Icon name='dropdown' />
+            How do you acquire a dog?
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 3}>
+            <p>
+              Three common ways for a prospective owner to acquire a dog is from
+              pet shops, private owners, or shelters.
+            </p>
+            <p>
+              A pet shop may be the most convenient way to buy a dog. Buying a dog
+              from a private owner allows you to assess the pedigree and
+              upbringing of your dog before choosing to take it home. Lastly,
+              finding your dog from a shelter, helps give a good home to a dog who
+              may not find one so readily.
+            </p>
+          </Accordion.Content>
+
+          <Accordion.Title
+            active={activeIndex === 4}
+            index={4}
+            onClick={this.handleClick}
+          >
+            <Icon name='dropdown' />
+            How do you acquire a dog?
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 4}>
+            <p>
+              Three common ways for a prospective owner to acquire a dog is from
+              pet shops, private owners, or shelters.
+            </p>
+            <p>
+              A pet shop may be the most convenient way to buy a dog. Buying a dog
+              from a private owner allows you to assess the pedigree and
+              upbringing of your dog before choosing to take it home. Lastly,
+              finding your dog from a shelter, helps give a good home to a dog who
+              may not find one so readily.
+            </p>
+          </Accordion.Content>
+
+          <Accordion.Title
+            active={activeIndex === 5}
+            index={5}
+            onClick={this.handleClick}
+          >
+            <Icon name='dropdown' />
+            How do you acquire a dog?
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 5}>
+            <p>
+              Three common ways for a prospective owner to acquire a dog is from
+              pet shops, private owners, or shelters.
+            </p>
+            <p>
+              A pet shop may be the most convenient way to buy a dog. Buying a dog
+              from a private owner allows you to assess the pedigree and
+              upbringing of your dog before choosing to take it home. Lastly,
+              finding your dog from a shelter, helps give a good home to a dog who
+              may not find one so readily.
+            </p>
+          </Accordion.Content>
+          <Accordion.Title
+            active={activeIndex === 6}
+            index={6}
+            onClick={this.handleClick}
+          >
+            <Icon name='dropdown' />
+            How do you acquire a dog?
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 6}>
+            <p>
+              Three common ways for a prospective owner to acquire a dog is from
+              pet shops, private owners, or shelters.
+            </p>
+            <p>
+              A pet shop may be the most convenient way to buy a dog. Buying a dog
+              from a private owner allows you to assess the pedigree and
+              upbringing of your dog before choosing to take it home. Lastly,
+              finding your dog from a shelter, helps give a good home to a dog who
+              may not find one so readily.
+            </p>
+          </Accordion.Content>
+          <Accordion.Title
+            active={activeIndex === 7}
+            index={7}
+            onClick={this.handleClick}
+          >
+            <Icon name='dropdown' />
+            How do you acquire a dog?
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 7}>
+            <p>
+              Three common ways for a prospective owner to acquire a dog is from
+              pet shops, private owners, or shelters.
+            </p>
+            <p>
+              A pet shop may be the most convenient way to buy a dog. Buying a dog
+              from a private owner allows you to assess the pedigree and
+              upbringing of your dog before choosing to take it home. Lastly,
+              finding your dog from a shelter, helps give a good home to a dog who
+              may not find one so readily.
+            </p>
+          </Accordion.Content>
         </Accordion>
       )
     }

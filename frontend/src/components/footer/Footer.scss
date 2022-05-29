@@ -1,0 +1,32 @@
+$base-blue: #0c2461;
+$light-blue: #1e3799;
+$crimson-red: #b71540;
+$grey-light: #d9d9d9;
+
+
+.Footer {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: $base-blue;
+    .Footer__logo {
+        margin: 20px 50px;
+
+
+    }
+
+    .Footer__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 50px;
+        
+        p {
+            font-size: 1rem;
+            font-weight: 700;
+            color: aliceblue;
+            margin: 5px;
+        }
+    }
+}
