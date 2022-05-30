@@ -1,7 +1,4 @@
-$base-blue: #0c2461;
-$light-blue: #1e3799;
-$crimson-red: #b71540;
-$grey-light: #d9d9d9;
+@import '../../index.scss';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 .Navbar {
   width: 100%;
@@ -20,6 +17,7 @@ $grey-light: #d9d9d9;
   justify-content: center;
   margin-right: 50px;
   
+
 }
 
 
@@ -42,7 +40,12 @@ $grey-light: #d9d9d9;
 .Navbar_button:hover {
     color: #f3275d;
 }
-.btn-active {
+.active {
   border-bottom: #f3275d solid 3px;
   color: #f3275d ;
+}
+
+.signup {
+    background-color: #1749c5;
+    border-radius: 5px;
 }

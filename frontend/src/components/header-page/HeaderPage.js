@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./HeaderPage.scss";
 import {  Icon } from "semantic-ui-react";
 import SearchCars from "../search-cars/Search-cars";
 const HeaderPage = () => {
+
+  const headerRef = useRef();
+
   return (
-    <div className="HeaderPage">
+    <div className="HeaderPage" ref={headerRef}>
       
       <h1 className="main-title">Car Rental – Search, Compare & Save</h1>
       <div className="hd-cont">

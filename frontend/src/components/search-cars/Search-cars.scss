@@ -1,8 +1,4 @@
-$base-blue: #0c2461;
-$light-blue: #1e3799;
-$crimson-red: #b71540;
-$grey-light: #d9d9d9;
-
+@import '../../index.scss';
 .SearchCars {
   display: flex;
   flex-direction: column;

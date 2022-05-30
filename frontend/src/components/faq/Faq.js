@@ -27,7 +27,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             What is a dog?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 0}>
+          <Accordion.Content active={activeIndex === 0} className="accordion-content">
             <p>
               A dog is a type of domesticated animal. Known for its loyalty and
               faithfulness, it can be found as a welcome guest in many households
@@ -43,7 +43,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             What kinds of dogs are there?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 1}>
+          <Accordion.Content active={activeIndex === 1} className="accordion-content">
             <p>
               There are many breeds of dogs. Each breed varies in size and
               temperament. Owners often select a breed of dog that they find to be
@@ -59,7 +59,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             How do you acquire a dog?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 2}>
+          <Accordion.Content active={activeIndex === 2} className="accordion-content">
             <p>
               Three common ways for a prospective owner to acquire a dog is from
               pet shops, private owners, or shelters.
@@ -82,7 +82,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             How do you acquire a dog?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 3}>
+          <Accordion.Content active={activeIndex === 3} className="accordion-content">
             <p>
               Three common ways for a prospective owner to acquire a dog is from
               pet shops, private owners, or shelters.
@@ -104,7 +104,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             How do you acquire a dog?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 4}>
+          <Accordion.Content active={activeIndex === 4} className="accordion-content">
             <p>
               Three common ways for a prospective owner to acquire a dog is from
               pet shops, private owners, or shelters.
@@ -126,7 +126,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             How do you acquire a dog?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 5}>
+          <Accordion.Content active={activeIndex === 5} className="accordion-content">
             <p>
               Three common ways for a prospective owner to acquire a dog is from
               pet shops, private owners, or shelters.
@@ -147,7 +147,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             How do you acquire a dog?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 6}>
+          <Accordion.Content active={activeIndex === 6} className="accordion-content">
             <p>
               Three common ways for a prospective owner to acquire a dog is from
               pet shops, private owners, or shelters.
@@ -168,7 +168,7 @@ export default class Faq extends Component {
             <Icon name='dropdown' />
             How do you acquire a dog?
           </Accordion.Title>
-          <Accordion.Content active={activeIndex === 7}>
+          <Accordion.Content active={activeIndex === 7} className="accordion-content">
             <p>
               Three common ways for a prospective owner to acquire a dog is from
               pet shops, private owners, or shelters.

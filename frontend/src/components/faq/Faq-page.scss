@@ -1,14 +1,12 @@
-$base-blue: #0c2461;
-$light-blue: #1e3799;
-$crimson-red: #b71540;
-$grey-light: #d9d9d9;
+@import '../../index.scss';
 
 .FaqPage {
     height: 100vh;
     display: flex;
     text-align: start;
-    align-items: center;
+
     justify-content: center;
+    flex-direction: column;
     background-color: $light-blue;
     clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 0, 50% 15%);
     backdrop-filter: blur(10px);

@@ -4,7 +4,7 @@ import { Container, Grid, Icon } from "semantic-ui-react";
 import "./About.scss";
 const About = () => {
   return (
-    <div className="About">
+    <div className="About" id="about">
       <Container>
         <h1 className="title-h1">About our company</h1>
 
