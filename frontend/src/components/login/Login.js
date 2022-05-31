@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Grid, Button } from "semantic-ui-react";
 import "./Login.scss";
+import { motion } from "framer-motion";
 const Login = () => {
 
     function handleClick() {
@@ -8,7 +9,11 @@ const Login = () => {
     };
 
   return (
-    <div className="Login">
+    <motion.div className="Login"
+    initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
      
       
       <Grid container divided columns={2}>
@@ -38,7 +43,7 @@ const Login = () => {
             </div>
             </Grid.Column>
           </Grid>
-    </div>
+    </motion.div>
   );
 };
 

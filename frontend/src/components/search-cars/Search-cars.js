@@ -1,14 +1,27 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Search-cars.scss";
 import { Form, Button, Icon } from "semantic-ui-react";
 import moment from "moment";
+import axios from "axios";
 
+const baseURL = "http://localhost:8000/api/locations/";
 const SearchCars = () => {
-  const options = [
-    { key: "g", text: "Gdańsk-Lotnisko", value: "Gdańsk-Lotnisko" },
-    { key: "w", text: "Warszawa-Lotnisko", value: "Warszawa-Lotnisko" },
-    { key: "k", text: "Kraków-Lotnisko", value: "Kraków-Lotnisko" },
-  ];
+  const [options, setOptions] = useState([]);
+/*   const [locations, setLocations] = useState([]); */
+
+  useEffect(() => {
+    axios.get(baseURL).then((res) => {
+  /*     setLocations(res.data); */
+      console.log(res.data);
+      setOptions(res.data.map((location) => ({
+        key: location.id,
+        text: location.location_name,
+        value: location.id,
+      })));
+    });
+  }, []);
+      
+  
 
   return (
     <div className="SearchCars">
