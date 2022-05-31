@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import FuelType, CarCategory, Location, Customer, Car, Discount, Payment, Booking
+from .models import Customer, Car, Location
 
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,3 +11,8 @@ class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
         fields = ('id', 'first_name', 'last_name', 'phone_number','email', 'street', 'city', 'zipcode', 'pesel')
+        
+class LocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Location
+        fields = ('id','location_name', 'street', 'city', 'zipcode')

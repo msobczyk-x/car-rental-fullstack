@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import CarSerializer, CustomerSerializer
-from .models import Car, Customer
+from .serializers import CarSerializer, CustomerSerializer, LocationSerializer
+from .models import Car, Customer, Location
 
 
 class CarView(viewsets.ModelViewSet):
@@ -12,3 +12,7 @@ class CarView(viewsets.ModelViewSet):
 class CustomerView(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+    
+class LocationView(viewsets.ModelViewSet):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer

@@ -23,6 +23,7 @@ from django.conf import settings
 router = routers.DefaultRouter()
 router.register(r'cars', views.CarView, 'carrental')
 router.register(r'customers', views.CustomerView, 'carrental')
+router.register(r'locations', views.LocationView, 'carrental')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
