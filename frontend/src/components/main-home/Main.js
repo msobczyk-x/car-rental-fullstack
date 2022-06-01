@@ -30,12 +30,12 @@ const Main = () => {
         </ScrollPage>
 
         <ScrollPage page={1}>
-          <Animator animation={batch(FadeIn(0.25, 1), MoveIn(0, 200))}>
+          <Animator animation={batch(FadeIn(0.25, 1), MoveIn(0, 300))}>
             <About />
           </Animator>
         </ScrollPage>
         <ScrollPage page={2}>
-          <Animator animation={batch(FadeIn(0.15, 1), MoveIn(0, 200))}>
+          <Animator animation={batch(FadeIn(0.15, 1), MoveIn(0, 300))}>
             <FaqPage />
           </Animator>
         </ScrollPage>

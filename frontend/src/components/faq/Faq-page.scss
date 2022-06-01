@@ -8,7 +8,8 @@
     justify-content: center;
     flex-direction: column;
     background-color: $light-blue;
-    clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 0, 50% 15%);
+    /* clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 0, 50% 15%); */
+    clip-path: polygon(50% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
     backdrop-filter: blur(10px);
 
     h1 {

@@ -1,8 +1,9 @@
 .About {
-    height: 100vh;
+    height: 150vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 100px;
 
     .title-h1 {
         margin: 0px 0;
@@ -28,3 +29,21 @@
 .about-cont {
     margin: 4rem 0;
 }
+
+.partner-image {
+    width:12vh;
+    height: 12vh;
+    margin: 0 auto;
+
+}
+
+.partners-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: row;
+}
+

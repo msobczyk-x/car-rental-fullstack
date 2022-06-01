@@ -10,7 +10,7 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Container className="contact-cont">
+      <Container text className="contact-cont" >
         <h1>Contact</h1>
         <Form>
           <Form.Field
@@ -26,17 +26,18 @@ const Contact = () => {
             placeholder="Last name"
           />
           <Form.Field
-            id="form-textarea-control-opinion"
-            control={TextArea}
-            label="Opinion"
-            placeholder="Opinion"
-          />
-          <Form.Field
             id="form-input-control-error-email"
             control={Input}
             label="Email"
             placeholder="joe@schmoe.com"
           />
+          <Form.Field
+            id="form-textarea-control-opinion"
+            control={TextArea}
+            label="Opinion"
+            placeholder="Opinion"
+          />
+          
           <Button type="submit">Send</Button>
         </Form>
       </Container>
