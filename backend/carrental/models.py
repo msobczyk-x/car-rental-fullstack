@@ -41,7 +41,8 @@ class Location(models.Model):
 
 class Customer(models.Model):
     """Customer details model"""
-    
+    username = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone_number = models.IntegerField()
@@ -50,6 +51,9 @@ class Customer(models.Model):
     city = models.CharField(max_length=100)
     zipcode = models.IntegerField()
     pesel = models.IntegerField()
+    
+    def __str__(self):
+        return self.first_name+" "+self.last_name
 
 class Car(models.Model):
     """

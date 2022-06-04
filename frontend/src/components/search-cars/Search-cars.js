@@ -4,7 +4,7 @@ import { Form, Button, Icon } from "semantic-ui-react";
 import moment from "moment";
 import axios from "axios";
 
-const baseURL = "http://localhost:8000/api/locations/";
+const baseURL = "http://localhost:8000/locations/";
 const SearchCars = () => {
   const [options, setOptions] = useState([]);
 /*   const [locations, setLocations] = useState([]); */

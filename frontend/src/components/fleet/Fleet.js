@@ -4,7 +4,7 @@ import axios from "axios";
 import { Card, Container } from "semantic-ui-react";
 import FleetCard from "./FleetCard";
 import { motion } from "framer-motion";
-const baseURL = "http://localhost:8000/api/cars/";
+const baseURL = "http://localhost:8000/cars/";
 const Fleet = () => {
   const [cars, setCars] = useState([]);
 

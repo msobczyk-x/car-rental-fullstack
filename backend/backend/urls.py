@@ -19,7 +19,6 @@ from rest_framework import routers
 from carrental import views
 from django.conf.urls.static import static 
 from django.conf import settings
-
 router = routers.DefaultRouter()
 router.register(r'cars', views.CarView, 'carrental')
 router.register(r'customers', views.CustomerView, 'carrental')
@@ -27,6 +26,7 @@ router.register(r'locations', views.LocationView, 'carrental')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('', include(router.urls)),
+    path('auth/', include("carrental.urls"))
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
