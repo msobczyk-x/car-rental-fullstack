@@ -1,8 +1,9 @@
 import React from "react";
 import "./FleetCard.scss";
-import { Card, Image } from "semantic-ui-react";
+import { Button, Card, Image } from "semantic-ui-react";
 
 const FleetCard = ({ car }) => {
+  const authTokens = localStorage.getItem("authTokens");
   return (
   <div className="FleetCard">
         
@@ -15,6 +16,16 @@ const FleetCard = ({ car }) => {
             </Card.Meta>
             <Card.Description>{car.description}</Card.Description>
           </Card.Content>
+          {
+            authTokens ? (
+              <Card.Content extra>
+              <Button>Rent</Button>
+            </Card.Content>
+            )
+          : null
+          
+          }
+         
           </Card>
 
 
