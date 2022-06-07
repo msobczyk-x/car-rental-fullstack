@@ -10,6 +10,7 @@ import Contact from "../contact/Contact";
 import SearchPage from "../search-page/SearchPage";
 
 import Signup from "../login/Signup";
+import AccountDetails from "../profile/account-details/AccountDetails";
 
 const AnimatedRoutes = () => {
     const location = useLocation();
@@ -26,6 +27,7 @@ const AnimatedRoutes = () => {
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/search-cars" element={<SearchPage/>}/>
+          <Route path="/account-details" element={<AccountDetails/>}/>
           </Routes>
           </AnimatePresence>
 

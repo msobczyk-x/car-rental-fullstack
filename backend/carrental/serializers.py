@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Customer, Car, Location
+from .models import CarCategory, Customer, Car, Location
 
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,14 +8,21 @@ class CarSerializer(serializers.ModelSerializer):
         
         
 class CustomerSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Customer
-        fields = ('id', 'first_name', 'last_name', 'phone_number','email', 'street', 'city', 'zipcode', 'pesel')
-        
+        fields = ('id','username','first_name', 'last_name', 'phone_number','email', 'street', 'city', 'zipcode', 'pesel')
+
+    
 class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
         fields = ('id','location_name', 'street', 'city', 'zipcode')
+        
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CarCategory
+        fields = ('id','category_name', 'number_of_luggage_bags', 'number_of_seats', 'cost_per_day')
         
 
 from django.contrib.auth.models import User

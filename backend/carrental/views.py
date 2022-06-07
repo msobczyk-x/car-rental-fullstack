@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import CarSerializer, CustomerSerializer, LocationSerializer
-from .models import Car, Customer, Location
+from .serializers import CarSerializer, CustomerSerializer, LocationSerializer, CategorySerializer
+from .models import Car, Customer, Location, CarCategory
 
 
 class CarView(viewsets.ModelViewSet):
@@ -10,12 +10,22 @@ class CarView(viewsets.ModelViewSet):
     
     
 class CustomerView(viewsets.ModelViewSet):
-    queryset = Customer.objects.all()
+
     serializer_class = CustomerSerializer
+    def get_queryset(self):
+        queryset = Customer.objects.all()
+        username = self.request.query_params.get('username')
+        if username is not None:
+            queryset = queryset.filter(username=username)
+        return queryset
     
 class LocationView(viewsets.ModelViewSet):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
+    
+class CategoryView(viewsets.ModelViewSet):
+    queryset = CarCategory.objects.all()
+    serializer_class = CategorySerializer
     
     
 from django.shortcuts import render
@@ -65,3 +75,18 @@ def testEndPoint(request):
         data = f'Congratulation your API just responded to POST request with text: {text}'
         return Response({'response': data}, status=status.HTTP_200_OK)
     return Response({}, status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+from django.shortcuts import render
+
+from django.http.response import JsonResponse
+from rest_framework.parsers import JSONParser 
+from rest_framework import status
+ 
+from .models import Customer
+from .serializers import CustomerSerializer
+from rest_framework.decorators import api_view
+
