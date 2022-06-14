@@ -46,6 +46,10 @@ Run server:
 npm start
 ```
 
+TODO:
+update erd_diagram
+make usage video
+make payments in profile
 Screenshots:
 
 ![Home Screen](https://github.com/msobczyk-x/car-rental-fullstack/raw/main/screens/home-screen.png "Home screen")
