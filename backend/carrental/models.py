@@ -114,7 +114,8 @@ class Payment(models.Model):
 
     booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
     total_amount = models.FloatField()
-    discount_amount = models.FloatField()
+    discount_amount = models.FloatField(blank=True, null=True)
     payment_status = models.BooleanField(default=False)
-    payment_date = models.DateField()
-    payment_method = models.CharField(max_length=100)
+    payment_date = models.DateField(blank=True, null=True)
+    payment_time = models.TimeField(blank=True, null=True)
+    payment_type = models.TimeField(blank=True, null=True)

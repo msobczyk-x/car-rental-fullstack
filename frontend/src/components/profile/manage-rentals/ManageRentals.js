@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import {Table, Header, Button}  from 'semantic-ui-react';
-import { useNavigate } from "react-router-dom";
+
 const ManageRentals = () => {
     const username=localStorage.getItem("user");
 
@@ -40,6 +40,7 @@ const ManageRentals = () => {
             axios.get(`http://localhost:8000/bookings/?userId=${res.data[0].id}`).then(respo => {
                 setRentals(respo.data);
     });})
+    //eslint-disable-next-line
     }, []);
 
     return (

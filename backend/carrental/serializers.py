@@ -32,7 +32,7 @@ class BookingSerializer(serializers.ModelSerializer):
 class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Payment
-        fields = ('id', 'booking', 'total_amount', 'discount_amount', 'payment_status', 'payment_date', 'payment_method')
+        fields = ('id', 'booking', 'total_amount', 'discount_amount', 'payment_status', 'payment_date', 'payment_time', 'payment_type')
         
 
 
