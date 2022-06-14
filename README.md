@@ -45,3 +45,7 @@ Run server:
     ```bash
     npm start
     ```
+
+Screenshots:
+
+![Home Screen](https://github.com/msobczyk-x/car-rental-fullstack/raw/main/screens/home-screen.png "Home screen")
