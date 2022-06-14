@@ -5,26 +5,26 @@
 
 Install the dependencies:
 
-    ```shell
+    ```bash
     cd backend/
     ```
 
-    ```shell
+    ```bash
     pip install -r requirements.txt
     ```
 Make migrations at database:
 
-    ```shell
+    ```bash
     python manage.py makemigrations
     ```
 
-    ```shell
+    ```bash
     python manage.py migrate
     ```
 
 Run server:
     
-    ```shell
+    ```bash
     python manage.py runserver
     ```
 
@@ -32,16 +32,16 @@ Run server:
 
 Install the dependencies:
 
-    ```shell
+    ```bash
     cd frontend/
     ```
 
-    ```shell
+    ```bash
     npm install --force
     ```
 
 Run server:
 
-    ```shell
+    ```bash
     npm start
     ```
