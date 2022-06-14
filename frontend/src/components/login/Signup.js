@@ -3,6 +3,7 @@ import { Form, Button, Container } from "semantic-ui-react";
 import "./Signup.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Error from "./Error";
 
 const Signup = () => {
 
@@ -79,9 +80,10 @@ const Signup = () => {
             id="confirm-password"
             onChange={e => setPassword2(e.target.value)}
             placeholder="Confirm Password"
+            
             required
           />
-          <p>{password2 !== password ? "Passwords do not match" : ""}</p>
+          <p>{password2 !== password ? <Error/> : ""}</p>
         </Form.Field>
         <Form.Field>
           <label>First name</label>

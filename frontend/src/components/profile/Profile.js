@@ -1,40 +1,32 @@
-import React, {useEffect, useState} from "react";
-import { Button } from "semantic-ui-react";
+import React from "react";
+
 import "./Profile.scss";
-import {NavLink} from 'react-router-dom';
-import axios from "axios";
+import { Link } from "react-router-dom";
+
 const Profile = () => {
   const username = localStorage.getItem("user");
 
-  
-  
   return (
     <div className="Profile">
-      
-        <h1>Manage</h1>
-        <div className="Profile__buttons">
-        
-          <h2>{username}</h2>
-          <Button color="red" className="btn">
-          <NavLink to="/account-details" className="profile-btn" >
+      <h1>Manage</h1>
+      <div className="Profile__buttons">
+        <h2>{username}</h2>
+       
+          <Link to="/manage-rentals" className="profile-btn btn-1">
             Manage rentals
-            
-            </NavLink>
-          </Button>
-          <Button color="blue" className="btn">
-        <NavLink to="/account-details" className="profile-btn" >
-            Payments
-            
-            </NavLink>
-            </Button>
-            <Button color="green" className="btn">
-        <NavLink to="/account-details" className="profile-btn" >
+          </Link>
+ 
+ 
+          <Link to="/payments" className="profile-btn btn-2">
+            Payments history
+          </Link>
+    
+        <Link to="/account-details" className="profile-btn btn-3">
+          
             Edit account details
-            
-        </NavLink>
-        </Button>
-        </div>
-      
+          
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,28 @@
+.ManageRentals {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    .main-container {
+        max-width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    
+        background-color: #fafafa;
+        padding: 50px;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    
+        -webkit-box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+        box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+    }
+}

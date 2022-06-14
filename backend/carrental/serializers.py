@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CarCategory, Customer, Car, Location
+from .models import CarCategory, Customer, Car, Location, Booking, Payment
 
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,6 +24,17 @@ class CategorySerializer(serializers.ModelSerializer):
         model = CarCategory
         fields = ('id','category_name', 'number_of_luggage_bags', 'number_of_seats', 'cost_per_day')
         
+class BookingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = ('id', 'customer', 'car', 'from_date', 'ret_date','from_time', 'ret_time', 'discount', 'amount', 'pickup_location', 'drop_location')
+        
+class PaymentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Payment
+        fields = ('id', 'booking', 'total_amount', 'discount_amount', 'payment_status', 'payment_date', 'payment_method')
+        
+
 
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password

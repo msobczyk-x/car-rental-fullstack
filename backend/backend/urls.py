@@ -25,6 +25,8 @@ router.register(r'cars', views.CarView, 'carrental')
 router.register(r'customers', views.CustomerView, 'carrental')
 router.register(r'locations', views.LocationView, 'carrental')
 router.register(r'categories', views.CategoryView, 'carrental')
+router.register(r'bookings', views.BookingView, 'carrental')
+router.register(r'payments', views.PaymentView, 'carrental')
 
 
 urlpatterns = [

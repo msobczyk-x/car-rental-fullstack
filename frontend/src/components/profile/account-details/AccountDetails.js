@@ -9,26 +9,30 @@ const AccountDetails = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState(0);
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
-  const [zipcode, setZipcode] = useState("");
-  const [pesel, setPesel] = useState("");
+  const [zipcode, setZipcode] = useState(0);
+  const [pesel, setPesel] = useState(0);
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(
-      firstName,
-      lastName,
-      email,
-      phone,
-      address,
-      city,
-      zipcode,
-      pesel
-    );
-  };
+ 
+const handleClick = ()  => {
+  axios.put(`http://localhost:8000/customers/${user.id}/`, {
+    username: username,
+    first_name: firstName,
+    last_name: lastName,
+    phone_number: phone,
+    email: email,
+    street: address,
+    city: city,
+    zipcode: zipcode,
+    pesel: pesel,
+    
+}
 
+    )
+   
+}
   useEffect(() => {
      async function fetchData() {
     await axios.get(`http://localhost:8000/customers/?username=${username}`)
@@ -36,7 +40,15 @@ const AccountDetails = () => {
     // handle success
     
     setUser(response.data[0]);
-
+    setPesel(response.data[0].pesel);
+    setFirstName(response.data[0].first_name);
+    setLastName(response.data[0].last_name);
+    setEmail(response.data[0].email);
+    setPhone(response.data[0].phone_number);
+    setAddress(response.data[0].street);
+    setCity(response.data[0].city);
+    setZipcode(response.data[0].zipcode);
+    
   })
   .catch(function (error) {
     // handle error
@@ -59,14 +71,14 @@ fetchData();
     <div className="AccountDetails">
       <div className="AccountDetails__container">
         <h1>Change account details</h1>
-        <Form onSubmit={handleSubmit} className="form">
+        <Form className="form">
           <Form.Field>
             <label>First name</label>
             <input
               type="text"
               id="first-name"
               onChange={(e) => setFirstName(e.target.value)}
-              value={user.first_name}
+              defaultValue={user.first_name}
               placeholder="First name"
             />
           </Form.Field>
@@ -76,7 +88,7 @@ fetchData();
               type="text"
               id="last-name"
               onChange={(e) => setLastName(e.target.value)}
-              value={user.last_name}
+              defaultValue={user.last_name}
               placeholder="Last name"
             />
           </Form.Field>
@@ -87,8 +99,8 @@ fetchData();
               id="phone-number"
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Phone number"
-              value={user.phone_number}
-              pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
+              defaultValue={user.phone_number}
+              
             />
           </Form.Field>
           <Form.Field>
@@ -98,8 +110,8 @@ fetchData();
               id="e-mail"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="E-mail"
-              value={user.email}
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              defaultValue={user.email}
+              
             />
           </Form.Field>
           <Form.Field>
@@ -107,7 +119,7 @@ fetchData();
             <input
               type="text"
               id="Street"
-              value={user.street}
+              defaultValue={user.street}
               onChange={(e) => setAddress(e.target.value)}
               placeholder="Street"
             />
@@ -118,7 +130,7 @@ fetchData();
               type="text"
               id="City"
               onChange={(e) => setCity(e.target.value)}
-              value={user.city}
+              defaultValue={user.city}
               placeholder="City"
             />
           </Form.Field>
@@ -128,26 +140,16 @@ fetchData();
               type="text"
               id="Zipcode"
               onChange={(e) => setZipcode(e.target.value)}
-              value={user.zipcode}
+              defaultValue={user.zipcode}
               placeholder="Zipcode"
             />
           </Form.Field>
-          <Form.Field>
-            <label>Pesel number</label>
-            <input
-              type="number"
-              id="Pesel number"
-              onChange={(e) => setPesel(e.target.value)}
-              value={user.pesel}
-              placeholder="Pesel number"
-              pattern="[0-9]{11}"
-            />
-          </Form.Field>
+         
           <div className="AccountDetails__buttons">
             <Button color="red" type="button" onClick={handleBack}>
               Cancel
             </Button>
-            <Button type="submit" color="green">
+            <Button type="submit" color="green" onClick={handleClick}>
               Save
             </Button>
           </div>

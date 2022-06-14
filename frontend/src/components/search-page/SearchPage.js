@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Card } from "semantic-ui-react";
 import "./SearchPage.scss";
-import FleetCard from "../fleet/FleetCard";
+import FleetCard from "./fleetcard/FleetCard";
 import axios from "axios";
 
 const SearchPage = () => {

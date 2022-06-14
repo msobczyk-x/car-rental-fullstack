@@ -1,0 +1,53 @@
+ .RentSummary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+    .Container-main {
+        text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 60%;
+  
+      background-color: #fafafa;
+      padding: 50px;
+      margin: 0;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+  
+      -webkit-box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+      box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #4a4a4a;
+       
+        margin: 20px;
+      }
+      .Container-main-inner {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+
+        .amount {
+          font-size: 2rem;
+        }
+
+         
+          
+      }
+    }
+ }

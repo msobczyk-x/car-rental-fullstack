@@ -6,6 +6,10 @@
     flex-direction: column;
     background-color: #f0f0f0;
     
+    h2 {
+        border-bottom: 2px solid #e0e0e0;
+        font-size: 2.5rem;
+    }
     .Profile__buttons {
         height: 500px;
         width: 400px;
@@ -25,8 +29,23 @@
             margin: 1rem 0;
         }
         .profile-btn {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            padding: 1.5rem;
+            font-size: 1.5rem;
             margin: 0.5rem 0;
             color: #f0f0f0;
+        }
+        .btn-1{
+            background-color: #d01919;
+        }
+
+        .btn-2{
+            background-color: #1678c2;
+        }
+
+        .btn-3{
+            background-color: #16ab39
         }
     }
 }

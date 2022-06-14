@@ -9,8 +9,12 @@ import {AnimatePresence} from 'framer-motion';
 import Contact from "../contact/Contact";
 import SearchPage from "../search-page/SearchPage";
 
+
 import Signup from "../login/Signup";
 import AccountDetails from "../profile/account-details/AccountDetails";
+import Payments from "../profile/payments/Payments";
+import ManageRentals from "../profile/manage-rentals/ManageRentals";
+import RentSummary from "../search-page/rent-sum/RentSummary";
 
 const AnimatedRoutes = () => {
     const location = useLocation();
@@ -28,6 +32,9 @@ const AnimatedRoutes = () => {
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/search-cars" element={<SearchPage/>}/>
           <Route path="/account-details" element={<AccountDetails/>}/>
+          <Route path="/payments" element={<Payments/>}/>
+          <Route path="/manage-rentals" element={<ManageRentals/>}/>
+          <Route path="/rent-summary" element={<RentSummary/>}/>
           </Routes>
           </AnimatePresence>
 

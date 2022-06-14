@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import CarSerializer, CustomerSerializer, LocationSerializer, CategorySerializer
-from .models import Car, Customer, Location, CarCategory
-
+from .serializers import BookingSerializer, CarSerializer, CustomerSerializer, LocationSerializer, CategorySerializer, PaymentSerializer
+from .models import Car, Customer, Location, CarCategory, Payment, Booking
+from rest_framework.decorators import action
+from rest_framework.decorators import api_view
 
 class CarView(viewsets.ModelViewSet):
     queryset = Car.objects.all()
@@ -27,6 +28,26 @@ class CategoryView(viewsets.ModelViewSet):
     queryset = CarCategory.objects.all()
     serializer_class = CategorySerializer
     
+class PaymentView(viewsets.ModelViewSet):
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
+
+class BookingView(viewsets.ModelViewSet):
+    
+    serializer_class = BookingSerializer
+    def get_queryset(self):
+        queryset = Booking.objects.all()
+        userId = self.request.query_params.get('userId')
+        if userId is not None:
+            queryset = queryset.filter(customer=userId)
+        return queryset
+   
+    @api_view(['DELETE'])
+    def deleteProduct(request, pk):
+     product = Booking.objects.get(id=pk)
+     product.delete()
+
+     return Response('Items delete successfully!')
     
 from django.shortcuts import render
 from rest_framework import status
