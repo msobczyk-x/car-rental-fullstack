@@ -27,12 +27,12 @@ class CategorySerializer(serializers.ModelSerializer):
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
-        fields = ('id', 'customer', 'car', 'from_date', 'ret_date','from_time', 'ret_time', 'discount', 'amount', 'pickup_location', 'drop_location')
+        fields = ('id', 'customer', 'car', 'from_date', 'ret_date','from_time', 'ret_time', 'discount', 'amount', 'pickup_location', 'drop_location', 'payment_status')
         
 class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Payment
-        fields = ('id', 'booking', 'total_amount', 'discount_amount', 'payment_status', 'payment_date', 'payment_time', 'payment_type')
+        fields = ('id', 'booking', 'total_amount', 'discount_amount','payment_status', 'payment_date', 'payment_time', 'payment_type')
         
 
 

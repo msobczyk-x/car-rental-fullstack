@@ -16,6 +16,7 @@ import Payments from "../profile/payments/Payments";
 import ManageRentals from "../profile/manage-rentals/ManageRentals";
 import RentSummary from "../search-page/rent-sum/RentSummary";
 
+
 const AnimatedRoutes = () => {
     const location = useLocation();
     return (
@@ -35,6 +36,7 @@ const AnimatedRoutes = () => {
           <Route path="/payments" element={<Payments/>}/>
           <Route path="/manage-rentals" element={<ManageRentals/>}/>
           <Route path="/rent-summary" element={<RentSummary/>}/>
+          <Route path="/payment" element={<Payments/>}/>
           </Routes>
           </AnimatePresence>
 

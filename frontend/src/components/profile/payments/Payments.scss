@@ -1,0 +1,59 @@
+@import '~react-credit-cards/lib/styles.scss';
+
+.Payments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 90vh;
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0f0;
+
+     
+    .main-container {
+        max-width: 500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 600px;
+        min-height: 50vh;
+    
+        background-color: #fafafa;
+        padding: 50px;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    
+        -webkit-box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+        box-shadow: 13px 9px 36px -26px rgba(66, 68, 90, 1);
+    }
+
+    .form {
+        text-align: start;
+        width: 300px;
+        margin: 10px 0;
+        .btn-grp {
+            width: 150px;
+        }
+    }
+    .form-group {
+        margin: 20px 0;
+    }
+    .form-group-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .form-inp2{
+            width: 100px;
+        }
+    }
+
+}

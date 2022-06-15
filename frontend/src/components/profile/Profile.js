@@ -17,9 +17,6 @@ const Profile = () => {
           </Link>
  
  
-          <Link to="/payments" className="profile-btn btn-2">
-            Payments 
-          </Link>
     
         <Link to="/account-details" className="profile-btn btn-3">
           

@@ -88,6 +88,7 @@ class Discount(models.Model):
     def __str__(self):
         return self.discount_name
     
+    
 class Booking(models.Model):
     """
     Booking model
@@ -103,7 +104,7 @@ class Booking(models.Model):
     amount = models.FloatField()
     pickup_location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name="pickup_location")
     drop_location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name="drop_location")
-
+    payment_status = models.BooleanField(default=False)
     def __str__(self):
         return self.customer.first_name + self.customer.last_name + self.car.brand_name + self.car.model_name
     
@@ -118,4 +119,4 @@ class Payment(models.Model):
     payment_status = models.BooleanField(default=False)
     payment_date = models.DateField(blank=True, null=True)
     payment_time = models.TimeField(blank=True, null=True)
-    payment_type = models.TimeField(blank=True, null=True)
+    payment_type = models.CharField(max_length=50,blank=True, null=True)

@@ -41,9 +41,9 @@ const FleetCard = ({ car }) => {
             </Card.Meta>
             <Card.Description>
               <p>{car.description}</p>
-            <p>Horse power: {car.horse_power}</p>
-            <p>Fuel consumption: {car.fuel_consumption}</p>
-            <p>Horse power: {car.horse_power}</p>
+            <p>Horse power: <span className="bold">{car.horse_power} KM</span></p>
+            <p>Fuel consumption: <span className="bold">{car.fuel_consumption} l/100km</span></p>
+            <p>Fuel type: <span className="bold">{car.fuel_type === 1 ? "petrol" : "diesel"}</span></p>
             
             </Card.Description>
           </Card.Content>

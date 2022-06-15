@@ -29,8 +29,14 @@ class CategoryView(viewsets.ModelViewSet):
     serializer_class = CategorySerializer
     
 class PaymentView(viewsets.ModelViewSet):
-    queryset = Payment.objects.all()
+    
     serializer_class = PaymentSerializer
+    def get_queryset(self):
+        queryset = Payment.objects.all()
+        bookingId = self.request.query_params.get('bookingId')
+        if bookingId is not None:
+            queryset = queryset.filter(booking=bookingId)
+        return queryset
 
 class BookingView(viewsets.ModelViewSet):
     
