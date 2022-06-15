@@ -1,12 +1,12 @@
 import React, {useState } from "react";
-import { Form, Button, Container } from "semantic-ui-react";
+import { Form, Button, Container, Label } from "semantic-ui-react";
 import "./Signup.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Error from "./Error";
+
 
 const Signup = () => {
-
+  const [wrongUsername, setWrongUsername] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
@@ -43,7 +43,11 @@ const Signup = () => {
     });
       alert("Successfully registered!");
       navigate("/login");
-    } else {
+    }
+    else if(response.status === 400){
+      setWrongUsername(true);
+    }
+    else {
       alert("Something went wrong!");
     }
   };
@@ -63,6 +67,15 @@ const Signup = () => {
             required
           />
         </Form.Field>
+        <span className="error">
+            {wrongUsername ? (
+              <Label pointing prompt color="red" size="large">
+                There is already a user with this username
+              </Label>
+            ) : (
+              ""
+            )}
+          </span>
         <Form.Field>
           <label>Password</label>
           <input
@@ -83,7 +96,13 @@ const Signup = () => {
             
             required
           />
-          <p>{password2 !== password ? <Error/> : ""}</p>
+          {password2 === password ? (
+              <Label pointing prompt color="red" size="large">
+                Passwords do not match
+              </Label>
+            ) : (
+              ""
+            )}
         </Form.Field>
         <Form.Field>
           <label>First name</label>
