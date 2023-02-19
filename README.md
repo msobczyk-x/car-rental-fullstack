@@ -1,5 +1,8 @@
 # Car rental system fullstack
 ### Using React and Django
+This project was created for a university course on web application and databases. As an backend technology I used was Django. The project involved the development of a CRUD (create, read, update, delete) REST API, which provides a standardized interface for interacting with data stored in a database.
+
+This project also utilized the React framework as the frontend technology.
 
 ## Backend
 
